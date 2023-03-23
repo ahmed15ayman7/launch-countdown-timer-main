@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+:root{
+
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+    
+
+    
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+    
+}
+*{
+    border: none !important;
+    outline: none !important;
+
+}
+body{
+    height: 100vh;
+    position: relative;
+    background: var(--Very-dark-mostly-black-blue) url(../images/bg-stars.svg);
+    font-family: 'Red Hat Text', sans-serif;
+    
+}
+
+p{
+    font-size: 18px !important;
+    color: var(--Gray);
+    
+}
+h1{
+    color: var(--White);
+}
+h5{
+    color: var(--Grayish-blue);
+}
+.num-time{
+    position: relative;
+    border-radius: 10px;
+    background: var(--Dark-desaturated-blue);
+}
+.num-time h1{
+    position: relative;
+    color: var(--Soft-red);
+    font-size: 50px !important;
+    margin-bottom: 0 !important;
+
+}
+.num-time::after{
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 0;
+    opacity: .5;
+    height: 50%;
+    width: 100%;
+    background-color: var(--Very-dark-blue);
+}
+.num-time::before{
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 0;
+    
+    height: 1%;
+    width: 100%;
+    background-color: var(--Very-dark-blue);
+}
+.num-time h1::after{
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 0;
+    height: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(50%) translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--Very-dark-mostly-black-blue);
+}
+.num-time h1::before{
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(50%) translateX(50%);
+    border-radius: 50%;
+    background-color: var(--Very-dark-mostly-black-blue);
+}
+.social svg{
+
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .num-time + h5{
+        font-size: 20px !important;
+        justify-content: center;
+    }
+
+}
+@media (max-width: 375px) {
+    .num-time h1{
+        font-size: 30px !important;
+    }
+    .num-time + h5{
+        font-size: 10px !important;
+    }
+    .r-h{
+        padding-top: 5rem !important;
+    }
+    .r-h >h1{
+        
+        font-size: 20px !important;
+    }
+}
